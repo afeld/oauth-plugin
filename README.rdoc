@@ -1,3 +1,5 @@
+= MAJOR NEW VERSION NOT READY FOR USE YET
+
 = OAuth Plugin
 
 This is a plugin for implementing OAuth Providers and Consumers in Rails applications.
@@ -369,6 +371,10 @@ And you could do:
   @location=@user.fire_eagle.client.location
 
 The client method gives you a OAuth::AccessToken which you can use to perform rest operations on the client site - see http://oauth.rubyforge.org/rdoc/classes/OAuth/AccessToken.html
+
+If you are using Mongoid you want to add an embeds_many association in your user model:
+
+  embeds_many :consumer_tokens
 
 === Custom ConsumerToken models
 
